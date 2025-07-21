@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kampung Gelang Mas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation Menu -->
+ <nav class="navbar">
+  <div class="logo-box">
+    <a href="webmaster.html"><img src="IMAGES/logo.jpg" alt="SAAZ Company" class="logo"></a>
+    <p class="logo-label">Kg Gelang Mas</p>
+  </div>
+  <ul class="nav-menu">
+    <li><button onclick="showPage('home')">Home</button></li>
+    <li><button onclick="showPage('history')">History</button></li>
+
+    <li class="dropdown">
+      <button>Kampung Gelang Mas ▼</button>
+      <ul class="dropdown-content">
+        <li><button onclick="showPage('community')">Community</button></li>
+        <li><button onclick="showPage('event')">Event</button></li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <button onclick="showPage('attractions')">Attractions</button>
+      <ul class="dropdown-content">
+     <li><button onclick="showPage('places')">Places</button></li>
+     </ul>
+    </li>
+    <li class="dropdown">
+      <button>Facilities ▼</button>
+      <ul class="dropdown-content">
+        <li><button onclick="showPage('transport')">Transport</button></li>
+        <li><button onclick="showPage('accommodation')">Accommodation</button></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+  <!-- Section: Home -->
+  <section id="home" class="page active">
+   <div class="welcome-box">
+  <h2>Welcome to Kampung Gelang Mas</h2>
+  <p>Explore cultural landmarks, vibrant markets, and the heart of community life.</p>
+  <p>Discover the rich cultural heritage and traditional lifestyle of one of Malaysia's most charming villages. Experience authentic local culture, traditional crafts, and warm community hospitality.</p>
+  <div class="slider-container">
+  <button class="prev" onclick="plusSlide(-1)">&#10094;</button>
+
+  <div class="slider-wrapper">
+    <img src="IMAGES/kg gelang mas.jpg" class="slide square-slide">
+    <img src="IMAGES/masjid gelang mas.jpg" class="slide square-slide">
+    <img src="IMAGES/sleeping buddha 2.jpg" class="slide square-slide">
+  </div>
+
+  <button class="next" onclick="plusSlide(1)">&#10095;</button>
+</div>
+<script>
+  let currentSlide = 0;
+  const slides = document.querySelectorAll(".square-slide");
+
+  function showSlide(index) {
+    if (index >= slides.length) currentSlide = 0;
+    else if (index < 0) currentSlide = slides.length - 1;
+    else currentSlide = index;
+
+    const offset = -currentSlide * 470; 
+    document.querySelector(".slider-wrapper").style.transform = `translateX(${offset}px)`;
+  }
+
+  function plusSlide(n) {
+    showSlide(currentSlide + n);
+  }
+
+  window.onload = function () {
+    showSlide(currentSlide);
+  };
+</script>
+
+
+   </div>
+  </section>
+
+  <!-- Section: History -->
+  <section id="history" class="page">
+  <div class="heading-box">
+    <h1>History of Kampung Gelang Mas</h1>
+  </div>
+  <div class="info-container">
+    <div class="info-box"><h3>Early Settlement</h3><br><p>Kampung Gelang Mas was established in the early 19th century by Malay settlers who were attracted to the fertile lands and strategic location. The village name translates to "Golden Bracelet Village," reflecting the prosperity and beauty of the area.</p></div>
+    <div class="info-box"><h3>Cultural Development</h3><br><p>Over the decades, the village developed its unique cultural identity, blending traditional Malay customs with influences from various ethnic communities. This rich cultural tapestry is still evident today in local festivals, crafts, and daily life.</p></div>
+    <div class="info-box"><h3>Traditional Crafts</h3><br><p>The village became known for its skilled artisans who specialized in traditional crafts such as woodcarving, batik making, and silver jewelry. These crafts continue to be practiced and celebrated today.</p></div>
+    <div class="info-box"><h3>Modern Preservation</h3><br><p>Today, Kampung Gelang Mas balances modernization with heritage preservation, maintaining its traditional character while welcoming visitors from around the world to experience authentic Malaysian village life.</p></div>
+  </div>
+  </section>
+
+  <!-- Section: Attractions -->
+  <section id="attractions" class="page">
+    <h1>Local Attractions</h1>
+    <p>Apart from its main highlight, Kampung Gelang Mas, the Pasir Mas district offers several other interesting places worth visiting.</p>
+
+  <h3>Welcome to Pasir Mas</h3>
+  <img src="IMAGES/I_love_pasir_mas.jpeg" alt="">
+
+  <h3>Masjid Ibrahimi (Masjid besar Pasir Mas)</h3>
+  <img src="IMAGES/masjid.jpg" alt="" height="160" width="316">
+
+  <h3> Wat Uttamaram (Buddhist Temple)</h3>
+  <img src="IMAGES/wat-uttamaram-tok-raja.jpg" alt="" height="160" width="316">
+  </section>
+  
+
+  <!-- Section: Places -->
+  <section id="places" class="page">
+
+    <h1>Places</h1>
+    <div class="grid">
+      <!-- Historical Landmark -->
+      <div class="section">
+        <h2>Historical Landmark</h2>
+        <img src="IMAGES/masjid tertua .jpg" class="image-box" alt="Masjid Kampung Laut">
+        <div class="text-box">Masjid Kampung Laut was built in the 15th century by Champa traders. Its design reflects local and South Indian influences. Originally simple, it was expanded during the Kelantan Sultanate (1859–1900) and became a key meeting and trading place. In 1970, it was handed over to the Kelantan government. The mosque is located about 20 km from Kampung Gelang Mas, Pasir Mas. Kampung Laut has long been a traditional gathering spot.</div>
+        <img src="IMAGES/bandar lama pasir mas.jpg" class="image-box" alt="Bandar Lama Pasir Mas">
+        <div class="text-box">Pasir Mas was founded by Che Leh Ismail, also known as Che Leh Tok Pendekar, after he moved from Kota Bharu when the Sultan took his land for a palace.<br>One day, after a religious teacher from Bachok finished teaching the Quran there, three pots of gold were said to appear and roll into a nearby pond. Villagers shouted “Mas! Mas!” (which means gold), leading to the name Pasir Mas. “Pasir” (sand) came from the large sandy area near the Kelantan River.</div>
+      </div>
+
+      <!-- Shopping -->
+      <div class="section">
+        <h2>Shopping</h2>
+        <img src="IMAGES/morning market.jpg" class="image-box" alt="Market">
+        <div class="text-box">Every Thursday, a morning market is held near Gelang Mas Mosque. Residents of Kampung Gelang Mas and nearby areas go to the market to shop for items such as vegetables, food, clothing, and other goods. The prices at the morning market are reasonable and affordable.</div>
+        <img src="IMAGES/Bandar Tasik Raja.jpg" class="image-box" alt="Bandar Tasik Raja">
+        <div class="text-box">Pasar Bandar Tasek Raja in Pasir Mas, Kelantan is a popular and modern marketplace offering fresh produce, local food, clothes, and household items at affordable prices. With its attractive Islamic-style architecture, it serves as a convenient shopping spot for locals and visitors. Located about 4–5 km from Kampung Gelang Mas, it takes only 8–10 minutes to reach by car or motorcycle, making it an accessible and essential destination for daily needs.</div>
+        <img src="IMAGES/perusahaan serunding.jpg" class="image-box" alt="Perusahaan Serunding Wan Sabariah">
+        <div class="text-box">The <strong>Perusahaan Serunding dan Dodol Wan Sabariah Pasir Mas, also known as Rumah Hijau</strong> due to its striking green and yellow traditional house, is a well-known local shopping destination in <strong>Pasir Mas, Kelantan. This family-run business specializes in **Kelantanese traditional delicacies</strong> such as serunding (spicy meat floss) and dodol (sweet toffee-like dessert). Visitors often stop here to buy these popular treats as souvenirs or gifts. The business operates daily from <strong>7:00 AM to 6:00 PM</strong>, and its vibrant and unique traditional house design also makes it a tourist attraction. It’s not just a food shop—it's an experience of local culture and flavors.</div>
+      </div>
+
+      <!-- To Eat -->
+      <div class="section">
+        <h2>To Eat</h2>
+        <img src="IMAGES/cafe.jpeg" class="image-box" alt="cafe">
+        <div class="text-box"><h3>Café</h3><br> 1.Nasken Coffee Pasir Mas<br>2.Titik Janji Cafe<br>3.Kopi Mesin Pasir Mas<br>4.KB Brewster Pasir Mas<br>5.Kopibeng</div>
+        <img src="IMAGES/restaurant.webp" class="image-box" alt="Restaurant">
+        <div class="text-box"> <h3>Restaurants</h3><br>1.Restaurants Sri Lemal<br>2.Restaurants Kelantan Thai<br>3.Restaurants Pelangi<br>4.Mat Yee Restaurants </div>
+        <img src="IMAGES/sf.jpg" class="image-box" alt="Street Food">
+        <div class="text-box"><h3>Street food</h3><br>1.Morning market<br>2.Night market</div>
+      </div>
+
+      <!-- Must Visit -->
+      <div class="section">
+        <h2>You Must Go</h2>
+        <img src="IMAGES/sleeping buddha.jpg" class="image-box" alt="only in Kg Gelang Mas">
+        <div class="text-box">The image shows the magnificent Sleeping Buddha statue at Wat Phothivihan in Tumpat, Kelantan, one of the largest reclining Buddha statues in Southeast Asia and a must-visit landmark for anyone exploring the region. This impressive 40-meter-long statue lies serenely within the temple grounds, surrounded by peaceful pavilions and beautiful Buddhist architecture, making it an ideal destination for those interested in culture, spirituality, and photography. Wat Phothivihan is approximately 5 kilometers from Kampung Gelang Mas, Pasir Mas, with a drive taking about 3-5 minutes—perfect for a memorable half-day trip to experience Kelantan’s unique cultural heritage.</div>
+        <img src="IMAGES/kathina buddha.jpg" class="image-box" alt="Festival">
+        <div class="text-box">The Kathina Ceremony is a revered tradition in Theravāda Buddhism, held annually after the conclusion of the monastic rainy retreat known as Vassa. At Wat Phothivihan in Kampung Gelang Mas, Pasir Mas, Kelantan famously home to the giant Sleeping Buddha. The ceremony transforms the temple grounds into a vibrant spiritual gathering. During this event, devotees offer new robes and essential items to Buddhist monks as an act of generosity and merit-making. The atmosphere is filled with prayer chants, community meals, and cultural displays that blend Thai and Malay village influences. It's more than just a religious ritual, it is a moment of shared values, reflection, and celebration deeply rooted in the heart of Gelang Mas.</div>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- Section: Transport -->
+  <section id="transport" class="page">
+    <h1>Transport</h1>
+    <p>From the state capital of Kelantan, Kota Bharu, you can drive to Kampung Gelang Mas.
+The journey takes only 27 minutes and covers a distance of approximately 19.5
+kilometers. </p>
+  </section>
+
+  <!-- Section: Accommodation -->
+  <section id="accommodation" class="page">
+    <h1>Accommodation</h1>
+    <p>Stay at homestays, guest houses, or nearby hotels for an authentic experience.</p>
+      <img src="IMAGES/QM Cottage Homestay.jpg" alt="Homestay" class="image-box">
+  <div class="text-box"><h3>QM Homestay Pasir Mas</h3><br><p>QM Cottage Homestay is located approximately 8.9 kilometers from Kampung Gelang Mas, and the journey takes about 11 minutes via D23 and Jalan Meranti/D25. For any inquiries or to make a reservation, you can contact the
+homestay at 012-921 4144. The address is Kampung Belukar, 17000 Pasir Mas,
+Kelantan, and you may also use the Google Maps code 345H+VJ Pasir Mas,
+Kelantan for navigation. </p>
+</div>
+  <img src="IMAGES/Rania Sofia Resort.jpg" alt="Resort" class="image-box">
+  <div class="text-box"><h3>Rania Sofia Resort( Swimming Pool )</h3><p>Rania Sofia Resort is located approximately 15 to 18 kilometers from Kampung Gelang Mas, with an estimated travel time of 15 to 20 minutes by car via the main
+Pasir Mas–Lubok Jong road. For any inquiries or bookings, you can reach Rania
+Sofia Resort at the address: 261, Kampung Cherang Hangus, 17200 Pasir Mas,
+Kelantan, or by calling 019-973 9773. The provided contact details will help make
+it easy for you to connect with the resort regarding your stay or any questions you
+may have. </p>
+</div>
+  </section>
+
+<!-- Section: Community -->
+<section id="community" class="page">
+  <h1>Community</h1>
+  <p>Meet the heart of the village — the people. Discover how traditions, family values, and cooperation shape daily life.</p>
+  <img src="IMAGES/dikir barat.jpg" alt="Dikir barat activity" class="image-box">
+  <div class="text-box">Kg Gelang Mas in Pasir Mas, Kelantan is known for its strong dikir barat tradition.The village has produced famous performers like Hussein Gelang Mas, known for his witty and spontaneous verses.Dikir barat is a traditional group performance that involves singing, pantun (rhymed verses), and traditional instruments like the rebana.</div>
+  <p>Community in Kg Gelang Mas:</p>
+  <div class="text-box">1. Melayu (Malay)
+  The majority of the population in Kampung Gelang Mas consists of Malay Muslims. The community is closely-knit and practices strong Islamic and cultural traditions. Daily life revolves around the mosque, local markets, and family gatherings. Traditional practices like kenduri, and  gotong-royong  are still widely observed. Most villagers speak in the Kelantanese dialect, which is distinct and rich in local expressions.
+  </div>
+  <div class="text-box">2. Siam (Thai/Malay Siamese)
+  Kampung Gelang Mas, like many other villages in Kelantan, is also home to a smaller population of Malay-Siam or Thai Muslims. They share a similar lifestyle with the Malays, but preserve unique customs such as traditional Thai-style house architecture, food practices, and cultural celebrations. Their presence contributes to the rich cultural blend in the village. They also speak Thai or Siamese dialects alongside Malay, and many are bilingual.
+  </div>
+ 
+</section>
+
+<!-- Section: Event -->
+<section id="event" class="page">
+  <h1>Event</h1>
+  <p>Celebrate with the village! Learn about festivals, performances, and seasonal happenings that bring Kampung Gelang Mas to life.</p>
+  <img src="IMAGES/kenduri.jpg" alt="Local event" class="image-box">
+  <div class="text-box"><p>In Kampung Gelang Mas, the spirit of togetherness truly shines during the holy month of Ramadan. As sunset approaches, villagers come together to prepare and distribute iftar meals, ensuring that no one in the community is left to break fast alone.<br>This tradition of food sharing often takes place at the mosque or community hall, where families volunteer ingredients, time, and effort to cook large quantities of dishes such as bubur lambuk, nasi briyani, or kurma ayam. Meals are then packed and distributed to nearby homes — especially to the elderly, single mothers, and those in need.<br>The practice is done with gotong-royong spirit, where everyone, from children to elders, plays a role — whether it's stirring the pot, packing the meals, or delivering them door to door. It's a beautiful example of community cooperation and compassion, turning every meal into an act of kindness and unity.</p>
+</div>
+
+  <img src="IMAGES/maulid.jpg" alt="Local event" class="image-box">
+  <div class="text-box"><p>Every year, the village of Kampung Gelang Mas celebrates Maulidur Rasul with great spirit and devotion, reflecting the deep spiritual values and unity of the community. The celebration usually begins with a village-wide procession, joined by people from all walks of life — from the elderly to school children. Participants march together while chanting selawat (praises for the Prophet Muhammad PBUH), wearing coordinated outfits and carrying banners expressing love and respect for the Prophet.<br>The procession typically ends at the village surau or community hall, where a religious talk (ceramah agama) is held to remind everyone of the Prophet’s noble character and teachings. The event concludes with a communal feast, prepared through gotong-royong (communal effort), turning the religious occasion into a meaningful moment of togetherness and neighbourly harmony.</p>
+</div>
+  <img src="IMAGES/rebana.jpg" alt="Local event" class="image-box">
+  <div class="text-box"><p>Another highlight in Kampung Gelang Mas is the traditional performance of Rebana Ubi — large, ornate drums played in unison by groups of villagers. In this village, rebana ubi is more than just a musical performance; it is a proud symbol of cultural identity and ancestral heritage, carefully preserved and passed down through generations.<br>The performance usually takes place at night, either at the community hall or open village field, often accompanied by silat (traditional martial arts) demonstrations and rhythmic drumming. It draws enthusiastic crowds, not only from the village but also from surrounding areas, reinforcing a strong sense of local pride and cultural continuity.</p>
+  </div>
+</section>
+
+
+  <!-- Page Switching Script -->
+<script>
+  function showPage(id) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+  }
+</script>
+
+<script>
+ document.querySelectorAll('.image-box').forEach(img => {
+    img.addEventListener('dblclick', () => {
+      img.classList.toggle('zoomed');
+    });
+  });
+</script>
+
+</body>
+</html>

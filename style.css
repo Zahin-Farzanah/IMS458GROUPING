@@ -1,0 +1,367 @@
+body {
+  font-family: 'Lucida Console', Cambria, serif;
+  background-color: #F5F5DC;
+  margin: 0;
+  padding: 0;
+}
+
+nav button {
+  background-color: #F5F5DC;
+  color: #2C3E50;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.page {
+  display: none;
+  padding: 40px;
+  color: #4B5320;
+}
+
+h1, h2 {
+  color: #2C3E50;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.section {
+  background-color: #F5F5DC;
+  padding: 20px;
+  border: 2px solid #ccc;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+}
+
+.image-box {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border: 2px solid #2C3E50;
+  margin: 10px 0;
+}
+
+.text-box {
+  background-color: #F5F5DC;
+  padding: 10px;
+  border: 2px solid #d4d4b5;
+  margin-bottom: 10px;
+}
+/* Navbar styling */
+.navbar {
+  list-style-type: none;
+  background-color: #F5F5DC;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar li {
+  position: relative;
+  margin: 0 10px;
+}
+
+.navbar button {
+  background-color: white;
+  color: #2C3E50;
+  border: none;
+  padding: 10px 15px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Dropdown Styling */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #ccc;
+  min-width: 150px;
+}
+
+.dropdown-content li {
+  width: 100%;
+}
+
+.dropdown-content button {
+  width: 100%;
+  border: none;
+  padding: 10px;
+  text-align: left;
+  background-color: white;
+  color: #2C3E50;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: #2C3E50;
+  padding: 10px 30px;
+  gap: 30px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Logo Box */
+.logo-box {
+  border: 2px solid #000;
+  padding: 8px;
+  text-align: center;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+}
+
+.logo-label {
+  margin-top: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #2C3E50;
+}
+
+/* Menu */
+.nav-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+}
+
+.nav-menu li {
+  position: relative;
+}
+
+.nav-menu button {
+  background-color: transparent;
+  border: none;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px;
+  color: #F5F5DC;
+}
+
+/* Dropdown */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  z-index: 1000;
+}
+
+.dropdown-content li button {
+  width: 100%;
+  text-align: left;
+  padding: 8px 12px;
+  background-color: white;
+  border: none;
+  color: #4B5320;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.welcome-box {
+  max-width: 700px;
+  margin: 60px auto;
+  background-color: #F5F5DC; 
+  border: 3px solid #2C3E50; 
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  border-radius: 10px;
+}
+
+.welcome-box h2 {
+  color: #4B5320; 
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.welcome-box p {
+  color: #2C3E50; 
+  font-size: 16px;
+  line-height: 1.6;
+}
+.image-box {
+  width: 100%;
+  max-width: 350px;  
+  height: auto;
+  display: block;
+  margin: 10px auto;  
+  border: 2px solid #F5F5DC; 
+  object-fit: cover;
+}
+.image-box.zoomed {
+  transform: scale(1.8);          
+  transition: transform 0.3s ease;
+  z-index: 10;
+  position: relative;
+}
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 20px;
+}
+
+.card {
+  width: 180px;
+  text-align: center;
+  background-color: #F5F5DC; 
+  border: 2px solid #4B5320; 
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.profile-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 2px solid #2C3E50; /* Dark blue frame */
+}
+
+.name-label {
+  margin-top: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #4B5320;
+}
+
+.heading-box {
+  background-color: #F5F5DC;
+  text-align: center;
+  padding: 20px;
+  border: 2px solid #2C3E50;
+  margin: 20px;
+}
+
+.heading-box h1 {
+  font-size: 36px;
+  margin: 0;
+  color: #2C3E50;
+}
+
+.info-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+
+.info-box {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  padding: 15px;
+  width: 22%;
+  margin: 10px 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.info-box:hover {
+  transform: scale(1.05);
+}
+.page {
+  display: none;
+}
+
+.page.active {display: block;}
+.slider-container {
+  position: relative;
+  max-width: 350px;
+  margin: 40px auto;
+  overflow: hidden;
+}
+
+.slider-wrapper {
+  display: flex;
+  width: calc(350px * 3);
+  transition: transform 0.4s ease;
+}
+
+.square-slide {
+  width: 350px;
+  height: 350px;
+    margin: 40px auto;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 3px solid #2C3E50;
+   border-radius: 8px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+}
+
+button.prev, button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(50%);
+  background-color: #4B5320;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+button.prev:hover, button.next:hover {
+  background-color: #2C3E50;
+}
+
+button.prev {
+  left: 10px;
+}
+
+button.next {
+  right: 10px;
+}
+.course-info-box {
+  max-width: 500px;
+  background-color: #F8F8F2;
+  border: 2px solid #4B5320; /* olive green */
+  border-radius: 10px;
+  padding: 20px;
+  margin: 30px auto;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+  color: #2C3E50;
+  line-height: 1.6;
+}
+
+.course-info-box strong {
+  color: #4B5320;
+}
